@@ -1,5 +1,6 @@
 package pl.zabrze.zs10.listy3ppiatek;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -29,6 +30,9 @@ public class TimerActivity extends AppCompatActivity {
         buttonZapisz = findViewById(R.id.buttonZapisz);
         textViewCzas = findViewById(R.id.textViewCzas);
         listViewCzasy = findViewById(R.id.listViewCzas);
+        if(savedInstanceState!=null){
+            sekundy = savedInstanceState.getInt("SEKUNDY",0);
+        }
         liczCzas();
         buttonStart.setOnClickListener(
                 new View.OnClickListener() {
@@ -101,5 +105,11 @@ public class TimerActivity extends AppCompatActivity {
         String czas =String.format("%02d:%02d:%02d",h,m,s);
         textViewCzas.setText(String.format("%02d:%02d:%02d",h,m,s));
         return czas;
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("SEKUNDY",sekundy);
     }
 }
