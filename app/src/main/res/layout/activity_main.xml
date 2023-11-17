@@ -17,6 +17,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/mysli"
-        android:divider="#2E82CA"/>
+        android:divider="#2E82CA"
+        android:dividerHeight="2dp"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="4dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lista myśli dynamicznie:" />
+
+    <ListView
+        android:id="@+id/listView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 
 </LinearLayout>
