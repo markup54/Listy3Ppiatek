@@ -10,7 +10,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dobre myśli" />
+        android:text="Dobre myśli"
+        android:textSize="24sp"/>
 
     <ListView
         android:id="@+id/listView"
@@ -28,12 +29,39 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lista myśli dynamicznie:" />
+        android:text="Lista myśli dynamicznie:"
+        android:textSize="24sp"
+        android:textColor="#234563"/>
 
     <ListView
         android:id="@+id/listView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content" >
+
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextMysl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Dobra myśl" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#123456"
+            android:text="Dodaj" />
+    </LinearLayout>
 
 
 </LinearLayout>
